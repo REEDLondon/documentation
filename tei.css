@@ -164,9 +164,10 @@ catRef{
     display: none;
 }
 
+/* hiding cell outline, which was border: 1px solid #EEEFEE; */
 cell{
     display: table-cell;
-    border: 1px solid #EEEFEE;
+    border: 1px solid #FFFFFF;
     padding: 3px;
     color: inherit;
     background-color: inherit;
@@ -174,6 +175,9 @@ cell{
 cell[role = 'label']{
     color: inherit;
     background-color: #BBBBBB;
+}
+cell[role='data']{
+    text-align: right;
 }
 change{
     display: block;
@@ -722,6 +726,11 @@ listBibl{
     display: block;
     margin-bottom: 0.5em;
 }
+measure {
+    display: inline;
+    color: blue;
+    font-style: italic;
+}
 mentioned{
     display: inline;
     font-style: italic;
@@ -729,11 +738,11 @@ mentioned{
 milestone{
     display: none;
 }
-/* IF WE WANT TO FIND AN OFFSET COLOR FOR SOME OF THE TAGGED NAMES */
-/*  name{ 
+/* OFFSET COLOR FOR THE TAGGED NAMES -- TEST */
+name{ 
     display: inline;
-    color: purple;  testing adding color for names in documents 
-}*/
+    color: green;
+}
 note{
     display: block;
     color: #999;
@@ -747,6 +756,12 @@ note[type]:before{
     content: attr(type) ': ';
 }
 */
+
+/* objects show in green */
+objectName {
+    display: inline;
+    color: green;
+}
 opener note{
     display: block;
     color: #999;
@@ -900,6 +915,15 @@ q:before{
 q:after{
     content: close-quote;
 }
+
+/* styling block quotes */
+quote{
+	display:block;
+	font-style: italic;
+	margin-left: 1em;
+	margin-right: 1em;
+	margin-bottom: 0.5em;
+}
 ref{
     display: inline;
     color: blue;
@@ -1001,8 +1025,9 @@ sp{
     margin-bottom: 0.5em;
     margin-left: 2em;
 }
+/*  CWRC uses text-align: justify for paragraphs. Trying left-align  */
 div p{
-    text-align: justify;
+    text-align: left;
     text-indent: 30px;
 }
 speaker{
@@ -1018,11 +1043,12 @@ stage{
     font-style: italic;
 }
 
-/* changed text-align to left - this should be inherited by row and cell */
+/* changed text-align to left - this should be inherited by row and cell  - also experimenting with table width*/
 table{
     text-align: left;
     display: table;
-    margin: 1em
+    margin: 1em;
+    width: 80%;
 }
 table > head{
     display: table-caption;
