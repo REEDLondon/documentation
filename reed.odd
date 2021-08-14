@@ -335,16 +335,16 @@
               </attDef>
               <attDef ident="cert" mode="change">
                 <valList mode="add" type="closed">
-                  <valItem ident="definite">
+                  <valItem ident="high">
                     <desc>There is a high degree of certainty about this date</desc>
                   </valItem>
-                  <valItem ident="reasonably certain">
+                  <valItem ident="moderate">
                     <desc>There is a moderate degree of certainty about this date</desc>
                   </valItem>
-                  <valItem ident="probable">
+                  <valItem ident="low">
                     <desc>There is a low degree of certainty about this date</desc>
                   </valItem>
-                  <valItem ident="speculative">
+                  <valItem ident="unknown">
                     <desc>The date is unknown</desc>
                   </valItem>
                 </valList>
