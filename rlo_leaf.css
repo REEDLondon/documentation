@@ -394,7 +394,7 @@ ex {
 
 /*  added blue for eventName */
 eventName {
-    color: blue;
+    color: #0D47A1;
     display: inline;
 }
 extent {
@@ -742,7 +742,7 @@ listBibl {
     margin-bottom: 0.5em;
 }
 measure {
-    color: blue;
+    color: #0D47A1;
     display: inline;
 }
 mentioned {
@@ -771,7 +771,7 @@ note[type]:before{
 
 
 objectName {
-    color: blue;
+    color: #0D47A1;
     display: inline;
 }
 opener note {
